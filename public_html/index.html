@@ -22,7 +22,7 @@
         
         <!-- Custom css for this tutorial -->
         <style>
-            #h3style
+            #h3Style
             {
                 color: gray;
             }
@@ -39,12 +39,15 @@
     </head>
     <body onResize="changeImage();">
         <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <p class="browsehappy">You are using an <strong>outdated</strong> 
+            browser. Please <a href="http://browsehappy.com/">upgrade your 
+            browser</a> to improve your experience.</p>
         <![endif]-->
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" 
+                  data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -65,7 +68,35 @@
         <div class="row">
             <div class="col-md-12">
                 
-                <img src="img/brain.png" id="littleBrain" onClick="alertMe();" ondblclick="alert('You double-clicked me!')" alt="image of brain">
+                <img src="img/brain.png" id="littleBrain" onClick="alertMe();" 
+                     ondblclick="alert('You double-clicked me!')" 
+                     alt="image of brain">
+                
+                <h3 id="h3Style" onMouseOver="changeColor();" 
+                    onMouseOut="changeColorAgain();" >Roll Over Me</h3>
+                <br>
+                
+                <!-- Show/hide paragraphs based on condition of checked boxes -->
+                <p id="firstParagraph">
+                    Wawaweewaa! Ooh lala! Oh well, king in the castle, king in 
+                    the castle, I have a chair! Go do this, go do this, king in 
+                    the castle.
+                </p>
+                <p id="secondParagraph">
+                    In Kazakhstan, it is illegal for more than five woman to be 
+                    in the same place except for in brothel or in grave. In US 
+                    and A, many womens meet in a groups called feminists.
+                </p>
+                <p id="thirdParagraph">
+                    I arrived in America's airport with clothings, US dollars, 
+                    and a jar of gypsy tears to protect me from AIDS.
+                </p>
+                <form name="formEx">
+                    <input type="checkbox" name="firstPara" onClick="showPara();"/>First Paragraph<br>
+                    <input type="checkbox" name="secondPara" onClick="showPara();"/>Second Paragraph<br>
+                    <input type="checkbox" name="thirdPara" onClick="showPara();"/>Third Paragraph<br>
+                </form>
+                
                 
             </div><!-- col-md-12 -->
         </div><!-- row -->
