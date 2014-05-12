@@ -96,7 +96,27 @@
                     <input type="checkbox" name="secondPara" onClick="showPara();"/>Second Paragraph<br>
                     <input type="checkbox" name="thirdPara" onClick="showPara();"/>Third Paragraph<br>
                 </form>
+                <br>
                 
+                <form name="formEx2">
+                    <p>Text Input</p>
+                    <input type="text" name="mouseX"/> Mouse X Position<br>
+                    <input type="text" name="mouseY"/> Mouse Y Position<br>
+                </form>
+                
+                <script language="javascript" type="text/javascript">
+                    // Check which browser is being used
+                    var mIE = (navigator.appName == "Microsoft Internet Explorer") ? true : false;
+                    if (!mIE)
+                    {
+                    document.captureEvents(Event.MOUSEMOVE);
+                    }
+                    document.onmousemove = mousePos;
+                    var mouseX = 0;
+                    var mouseY = 0;
+                </script>
+                
+
                 
             </div><!-- col-md-12 -->
         </div><!-- row -->
